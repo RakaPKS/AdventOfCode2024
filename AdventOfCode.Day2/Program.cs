@@ -1,9 +1,12 @@
 ﻿const string fileName = "input";
 var reports = ParseInput(fileName);
+
 var pureAmount = reports.Count(IsValidReport);
 Console.WriteLine($"Valid Reports: {pureAmount}");
+
 var boostedAmount = reports.Count(IsValidReportWithDampener);
 Console.WriteLine($"Valid Reports with Problem Dampener: {boostedAmount}");
+
 return;
 
 static List<List<int>> ParseInput(string fileName)
